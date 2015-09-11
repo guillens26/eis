@@ -3,3 +3,7 @@ set -e
 cd ejemplo_banco
 bundle install
 bundle exec rake
+cd ..
+cd Kata1-Chopper
+bundle install
+bundle exec rake
