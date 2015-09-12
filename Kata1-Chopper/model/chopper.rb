@@ -5,11 +5,19 @@ class Chopper
   end
 
   def sum(array)
+    numbers = ['cero', 'uno', 'dos', 'tres', 'cuatro']
     if(array == [])
       'vacio'
-    elsif (array[0] == 1)
-      'uno'
+    else
+      total = 0
+      array.each do |elem|
+        total += elem 
+        end
+      numbers[total]
     end
   end 
+
+  
+
 
 end

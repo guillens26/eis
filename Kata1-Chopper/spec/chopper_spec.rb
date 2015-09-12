@@ -38,9 +38,9 @@ describe 'Chopper' do
   end
 
   #Test 6
-# it 'sum de [1,3] deberia ser cuatro' do
-#   expect(chopper.sum([1,3])).to eq 'cuatro'
-# end
+  it 'sum de [1,3] deberia ser cuatro' do
+    expect(chopper.sum([1,3])).to eq 'cuatro'
+  end
 
   #Test 7
 # it 'sum de [9,9] deberia ser uno,ocho' do
