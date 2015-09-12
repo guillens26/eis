@@ -53,8 +53,8 @@ describe 'Chopper' do
   end
 
   #Test 9
-# it 'sum de [50,49] deberia ser nueve,nueve' do
-#   expect(chopper.sum([50,49])).to eq 'nueve,nueve'
-# end
+  it 'sum de [50,49] deberia ser nueve,nueve' do
+    expect(chopper.sum([50,49])).to eq 'nueve,nueve'
+  end
 
 end
