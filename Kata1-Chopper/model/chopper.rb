@@ -5,9 +5,11 @@ class Chopper
   end
 
   def sum(array)
-    if (array == [])
+    if(array == [])
       'vacio'
+    elsif (array[0] == 1)
+      'uno'
     end
-  end
+  end 
 
 end
