@@ -48,9 +48,9 @@ describe 'Chopper' do
   end
 
   #Test 8
-# it 'sum de [50,50] deberia ser demasiado grande' do
-#   expect(chopper.sum([50,50])).to eq 'demasiado grande'
-# end
+  it 'sum de [50,50] deberia ser demasiado grande' do
+    expect(chopper.sum([50,50])).to eq 'demasiado grande'
+  end
 
   #Test 9
 # it 'sum de [50,49] deberia ser nueve,nueve' do

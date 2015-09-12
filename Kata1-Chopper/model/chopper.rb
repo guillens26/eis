@@ -14,16 +14,15 @@ class Chopper
       array.each do |elem|
         total += elem 
       end
-      if (total>9)    
-          resultado << (total - total/10 * 10)
-          resultado << total = total/10
-          numbers[resultado[1]]+ ',' + numbers[resultado[0]]
-      else
+      if (total<9)    
         numbers[total]
+      elsif(total<100)
+        resultado << (total - total/10 * 10)
+        resultado << total = total/10
+        numbers[resultado[1]]+ ',' + numbers[resultado[0]]
+      else
+        'demasiado grande'
       end
-      
     end
-  
   end 
-
 end
