@@ -59,8 +59,8 @@ describe 'Chopper' do
 
   #Complemento
   #Test 10
-#  it 'sum de [0,0] deberia ser cero' do
-#    expect(chopper.sum([0,0])).to eq 'cero'
-#  end
+  it 'sum de [0,0] deberia ser cero' do
+    expect(chopper.sum([0,0])).to eq 'cero'
+  end
 
 end
