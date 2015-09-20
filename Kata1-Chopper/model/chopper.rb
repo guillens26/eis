@@ -1,8 +1,12 @@
 class Chopper
 
   def chop(int, array)
-    #Calculo el tamaño de mi arreglo y le resto 1
-    array.length - 1
+    #Devuelve la posición del elemento en el array
+    if (array != [])
+      array.index int
+    else
+      -1
+    end
   end
 
   #Creo numbers para luego traducir el numero a palabras 
