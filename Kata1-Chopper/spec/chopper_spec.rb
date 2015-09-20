@@ -69,9 +69,9 @@ describe 'Chopper' do
   end
 
   #Test 12
-#  it 'sum de [20,1,1,1] deberia ser dos,tres' do
-#    expect(chopper.sum([20,1,1,1])).to eq 'dos,tres'
-#  end
+  it 'sum de [20,1,1,1] deberia ser dos,tres' do
+    expect(chopper.sum([20,1,1,1])).to eq 'dos,tres'
+  end
 
 
 end
