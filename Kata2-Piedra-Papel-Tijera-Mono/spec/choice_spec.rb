@@ -18,4 +18,10 @@ describe 'Stone' do
     expect(expected).to eq 'lose'
   end
 
+  #Test 3
+  it 'scissors de stone deberia ser win ' do
+  	expected = stone.scissors
+    expect(expected).to eq 'win'
+  end
+
 end

@@ -12,6 +12,11 @@ class Choice
     @paper
   end
 
+  def scissors 
+    @scissors
+  end
+
+
 
   
 
