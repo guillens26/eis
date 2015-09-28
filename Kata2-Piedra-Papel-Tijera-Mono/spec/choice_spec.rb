@@ -12,4 +12,10 @@ describe 'Stone' do
     expect(expected).to eq 'stone'
   end
 
+  #Test 2
+  it 'paper de stone deberia ser lose ' do
+  	expected = stone.paper
+    expect(expected).to eq 'lose'
+  end
+
 end

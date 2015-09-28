@@ -1,18 +1,11 @@
-class Choice
-  
+class State
+
   def initialize
     raise 'Doh! You are trying to instantiate an abstract class!'
   end
 
-  def name
-    @name
+  def string
+    @string
   end
-
-  def paper 
-    @paper
-  end
-
-
-  
 
 end
