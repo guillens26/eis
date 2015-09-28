@@ -16,6 +16,11 @@ class Choice
     @scissors
   end
 
+  def stone 
+    @stone
+  end
+
+
 
 
   
