@@ -7,3 +7,7 @@ cd ..
 cd Kata1-Chopper
 bundle install
 bundle exec rake
+cd ..
+cd Kata2-Piedra-Papel-Tijera-Mono
+bundle install
+bundle exec rake
