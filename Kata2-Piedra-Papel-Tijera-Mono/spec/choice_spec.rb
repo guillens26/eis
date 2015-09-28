@@ -24,9 +24,15 @@ describe 'Stone' do
     expect(expected).to eq 'win'
   end
 
-  #Test 3
+  #Test 4
   it 'stone de stone deberia ser tie ' do
   	expected = stone.stone
+    expect(expected).to eq 'tie'
+  end
+
+  #Test 5
+  it 'monkey de stone deberia ser tie ' do
+  	expected = stone.monkey
     expect(expected).to eq 'tie'
   end
 

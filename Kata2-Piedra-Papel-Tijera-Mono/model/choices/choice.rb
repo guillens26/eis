@@ -20,9 +20,9 @@ class Choice
     @stone
   end
 
+  def monkey 
+    @monkey
+  end
 
-
-
-  
 
 end

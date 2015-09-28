@@ -14,6 +14,7 @@ class Stone < Choice
     @paper = lose.string
     @scissors = win.string
     @stone = tie.string
+    @monkey = tie.string
  
   end
 
