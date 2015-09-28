@@ -23,6 +23,17 @@ class Choice
   def monkey 
     @monkey
   end
-
+  
+  def compare(choice)
+    if choice.name == 'stone'
+      self.stone
+    elsif choice.name == 'paper'
+      self.paper
+    elsif choice.name == 'scissors'
+      self.scissors
+    else
+      self.monkey     
+    end
+  end
 
 end

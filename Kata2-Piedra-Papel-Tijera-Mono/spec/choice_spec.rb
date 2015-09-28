@@ -1,10 +1,12 @@
 require 'rspec' 
 require_relative '../model/choices/stone'
+require_relative '../model/choices/paper'
 
 
 describe 'Stone' do
 
   let(:stone) { Stone.new }
+  let(:paper) { Paper.new } 
 
   #Test 1
   it 'name de stone deberia ser stone ' do
@@ -34,6 +36,12 @@ describe 'Stone' do
   it 'monkey de stone deberia ser tie ' do
   	expected = stone.monkey
     expect(expected).to eq 'tie'
+  end
+
+  #Test 6
+  it 'stone compare con paper gana paper deberia ser lose ' do
+  	expected = stone.compare(paper)
+    expect(expected).to eq 'lose'
   end
 
 end
