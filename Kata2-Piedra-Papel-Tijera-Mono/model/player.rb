@@ -1,7 +1,7 @@
 class Player
 
   def play(choice)
-    choice.name
+    choice
   end
 
 end

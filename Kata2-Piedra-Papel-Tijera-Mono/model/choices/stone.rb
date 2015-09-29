@@ -6,9 +6,9 @@ require_relative '../state/tie'
 class Stone < Choice
 
   def initialize  
-  	lose = Lose.new
-  	win = Win.new
-  	tie = Tie.new
+    lose = Lose.new
+    win = Win.new
+    tie = Tie.new
     
     @name = 'stone'   
     @paper = lose.string

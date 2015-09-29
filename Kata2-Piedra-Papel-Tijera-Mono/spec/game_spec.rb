@@ -2,6 +2,7 @@ require 'rspec'
 require_relative '../model/choices/stone'
 require_relative '../model/choices/paper'
 require_relative '../model/player'
+require_relative '../model/game'
 
 
 describe 'Stone,Paper,Scissors or Monkey' do
@@ -9,6 +10,8 @@ describe 'Stone,Paper,Scissors or Monkey' do
   let(:stone) { Stone.new }
   let(:paper) { Paper.new }
   let(:player1) {Player.new} 
+  let(:player2) {Player.new} 
+  let(:game) {Game.new}
 
   #Test 1
   it 'name de stone deberia ser stone ' do
@@ -47,9 +50,18 @@ describe 'Stone,Paper,Scissors or Monkey' do
   end
 
   #Test 7
-  it 'jugador1 juega piedra deberia ser piedra ' do
+  it 'jugador1 juega stone deberia ser stone ' do
     expected = player1.play(stone)
-    expect(expected).to eq 'stone'
+    expect(expected.name).to eq 'stone'
+  end
+
+  #Test 8
+  it 'j1 play paper y j2 play stone deberia ganar j1 ' do
+    choice1 = player1.play(paper)
+    choice2 = player2.play(stone)
+    game.compare(choice1, choice2)
+    expected = game.rounds[0]
+    expect(expected).to eq 'p1'
   end
 
 
