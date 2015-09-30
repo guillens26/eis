@@ -74,22 +74,28 @@ describe 'Stone,Paper,Scissors or Monkey' do
     expect(expected).to eq 'Player1'
   end
 
-  #Test 10
-  it 'stone compare con scissors gana stone deberia ser win ' do
-    expected = stone.compare(scissors)
+  #Test 13
+  it 'scissors compare con monkey deberia ser lose ' do
+    expected = scissors.compare(monkey)
+    expect(expected).to eq 'lose'
+  end
+
+  #Test 14
+  it 'scissors compare con scissors deberia ser tie ' do
+    expected = scissors.compare(scissors)
+    expect(expected).to eq 'tie'
+  end
+
+  #Test 15
+  it 'scissors compare con stone deberia ser lose ' do
+    expected = scissors.compare(stone)
+    expect(expected).to eq 'lose'
+  end
+
+  #Test 16
+  it 'scissors compare con paper deberia ser win ' do
+    expected = scissors.compare(paper)
     expect(expected).to eq 'win'
-  end
-
-  #Test 11
-  it 'stone compare con monkey deberia ser tie ' do
-    expected = stone.compare(monkey)
-    expect(expected).to eq 'tie'
-  end
-
-  #Test 12
-  it 'stone compare con stone deberia ser tie ' do
-    expected = stone.compare(stone)
-    expect(expected).to eq 'tie'
   end
 
 
