@@ -2,6 +2,7 @@ require_relative '../choices/choice'
 
 class Stone < Choice
 
+  #Seteo como juega la piedra
   def initialize  
     @name = 'stone'   
     @paper = 'lose'

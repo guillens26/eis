@@ -1,5 +1,6 @@
 class Choice
   
+  #Es abstracta
   def initialize
     raise 'Doh! You are trying to instantiate an abstract class!'
   end
@@ -24,6 +25,7 @@ class Choice
     @monkey
   end
   
+  #Mis opciones saben a quien les ganan, pierden y empatan
   def compare(choice)
     if choice.name == 'stone'
       self.stone

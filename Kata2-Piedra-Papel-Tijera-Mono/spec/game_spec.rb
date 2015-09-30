@@ -3,6 +3,8 @@ require_relative '../model/choices/stone'
 require_relative '../model/choices/paper'
 require_relative '../model/player'
 require_relative '../model/game'
+require_relative '../model/choices/monkey'
+require_relative '../model/choices/scissors'
 
 
 describe 'Stone,Paper,Scissors or Monkey' do
@@ -12,6 +14,8 @@ describe 'Stone,Paper,Scissors or Monkey' do
   let(:player1) {Player.new} 
   let(:player2) {Player.new} 
   let(:game) {Game.new}
+  let(:monkey) { Monkey.new }
+  let(:scissors) { Scissors.new }
 
   #Test 1
   it 'name de stone deberia ser stone ' do
@@ -69,6 +73,25 @@ describe 'Stone,Paper,Scissors or Monkey' do
     expected = game.play_game(player1, player2)
     expect(expected).to eq 'Player1'
   end
+
+  #Test 10
+  it 'stone compare con scissors gana stone deberia ser win ' do
+    expected = stone.compare(scissors)
+    expect(expected).to eq 'win'
+  end
+
+  #Test 11
+  it 'stone compare con monkey deberia ser tie ' do
+    expected = stone.compare(monkey)
+    expect(expected).to eq 'tie'
+  end
+
+  #Test 12
+  it 'stone compare con stone deberia ser tie ' do
+    expected = stone.compare(stone)
+    expect(expected).to eq 'tie'
+  end
+
 
 
 end

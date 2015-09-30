@@ -5,6 +5,7 @@ require_relative '../model/choices/stone'
 
 class Player
 
+  #Un jugador conoce a las 4 posibles variantes y se puede acordar del que eligio(selected)
   def initialize()
     @stone = Stone.new
     @monkey = Monkey.new
