@@ -47,22 +47,21 @@ class Game
     $rounds_wins_p1 = 0
     $rounds_wins_p2 = 0
     $count_tie = 0
-    @round = []
+    @rounds = []
     #Juego las primeras 2 rondas
     self.play_round(p1_r1,p2_r1)
     self.play_round(p1_r2,p2_r2)
-    if (hay_ganador())
-      self.result_global_is()  
-    else
-      self.play_round(p1_r3,p2_r3)
+    if (not hay_ganador())
+      self.play_round(p1_r3,p2_r3)  
     end
+    self.result_global_is()
 
   end
 
   #Saber si hay ganador
   def hay_ganador() 
-    ($rounds_wins_p1 == 2 || $rounds_wins_p2 == 2 || $count_tie  == 2) || 
-    ($rounds_wins_p1 == 1 && $rounds_wins_p2 == 1 && $count_tie  == 1)
+    ($rounds_wins_p1 == 2 || $rounds_wins_p2 == 2 || $count_tie  == 2) ||
+     ($rounds_wins_p1 == 1 && $rounds_wins_p2 == 1 && $count_tie  == 1)
   
   end
 
@@ -76,7 +75,7 @@ class Game
       'Player2'
     #Este tie es cuando hay 1 tie 1 player1 win y 1 player2 win
     else 
-      'Tie'
+      'Tie2'
     end
   end
 

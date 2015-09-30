@@ -182,7 +182,7 @@ describe 'Stone,Paper,Scissors or Monkey' do
     expect(expected).to eq 'Player2'
   end
 
-  #Test 24
+  #Test 25
   it 'j1 y j2 juegan un game y deberia ser tie ' do
     #ESte es tie xq empataron las primeras 2 rounds
     p1_r1 = player1.paper
@@ -194,5 +194,20 @@ describe 'Stone,Paper,Scissors or Monkey' do
     expected = game.play_game(p1_r1, p1_r2, p1_r3, p2_r1, p2_r2, p2_r3 )
     expect(expected).to eq 'Tie'
   end
+
+  #Test 26
+  it 'j1 y j2 juegan un game y deberia ser tie ' do
+    #ESte es tie xq empataron cada uno gano 1 y en la ultima empataron
+    p1_r1 = player1.paper
+    p1_r2 = player1.paper
+    p1_r3 = player1.paper
+    p2_r1 = player2.scissors
+    p2_r2 = player2.stone
+    p2_r3 = player2.paper
+    expected = game.play_game(p1_r1, p1_r2, p1_r3, p2_r1, p2_r2, p2_r3 )
+    expect(expected).to eq 'Tie2'
+  end
+
+ 
 
 end
