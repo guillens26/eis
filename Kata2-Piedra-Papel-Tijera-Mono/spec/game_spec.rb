@@ -122,5 +122,28 @@ describe 'Stone,Paper,Scissors or Monkey' do
     expect(expected).to eq 'tie'
   end
 
+  #Test 18
+  it 'paper compare con scissors deberia ser lose ' do
+    expected = paper.compare(scissors)
+    expect(expected).to eq 'lose'
+  end
+
+  #Test 19
+  it 'paper compare con stone deberia ser win ' do
+    expected = paper.compare(stone)
+    expect(expected).to eq 'win'
+  end
+
+  #Test 16
+  it 'paper compare con paper deberia ser tie ' do
+    expected = paper.compare(paper)
+    expect(expected).to eq 'tie'
+  end
+
+  #Test 17
+  it 'paper compare con monkey deberia ser lose ' do
+    expected = paper.compare(monkey)
+    expect(expected).to eq 'lose'
+  end
 
 end
