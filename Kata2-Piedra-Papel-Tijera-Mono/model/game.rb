@@ -13,25 +13,9 @@ class Game
     @rounds 
   end
 
-  def player1
-    @player1
-  end
-
-  def player2
-    @player2
-  end
-
-  def set_player1(player)
-    @player1 = player
-  end
-
-  def set_player2(player)
-    @player2 = player
-  end
-
   #Comparo la seleccion del jugador 1 con la del 2
-  def compare()
-    result = @player1.selected.compare(@player2.selected)
+  def compare(choice1, choice2)
+    result = choice1.compare(choice2)
     result
 
   end
@@ -52,47 +36,39 @@ class Game
   end
 
   #JUego una ronda con las opciones que elijan los jugadores, las comparo y guardo el ganador de la ronda
-  def play_round(choice1, choice2) 
-    @player1.choose(choice1)
-    @player2.choose(choice2)
-    result = self.compare()
+  def play_round(choice1, choice2)
+    result = self.compare(choice1, choice2)
     self.save_win_round(result)
   end
 
   # Para jugar una partida a tres rondas
-  def play_game(player1, player2)
-    #Selecciono los jugadores
-    self.set_player1(player1)
-    self.set_player2(player2)
-    # Creo un ciclo para jugar tres rondas
-    x = 3
-    not_ended = true 
-    #Si es menor a 0 fue tie si fue not_ended es que ya hubo un ganador sino sigo
-    while (x>0 && not_ended)
-      if (hay_ganador())
-        #si termino salgo del ciclo y guardo el resultado
-        result_global = self.result_global_is()
-        not_ended = false  
-      else
-        #JUego siguiente ronda
-        self.play_round(@player1.paper, @player2.stone)
-      end
-      x = x - 1 
+  def play_game(p1_r1, p1_r2, p1_r3, p2_r1, p2_r2, p2_r3)
+    #Seteo en 0 y vacio las variables globales
+    $rounds_wins_p1 = 0
+    $rounds_wins_p2 = 0
+    $count_tie = 0
+    @round = []
+    #Juego las primeras 2 rondas
+    self.play_round(p1_r1,p2_r1)
+    self.play_round(p1_r2,p2_r2)
+    if (hay_ganador())
+      self.result_global_is()  
+    else
+      self.play_round(p1_r3,p2_r3)
     end
-    #Muestro el resultado
-    result_global
-    
+
   end
 
-  #SAber si hay ganador
+  #Saber si hay ganador
   def hay_ganador() 
-    $rounds_wins_p1 == 2 || $rounds_wins_p2 == 2
+    ($rounds_wins_p1 == 2 || $rounds_wins_p2 == 2 || $count_tie  == 2) || 
+    ($rounds_wins_p1 == 1 && $rounds_wins_p2 == 1 && $count_tie  == 1)
   
   end
 
   def result_global_is()
     #Tie cuando la cant de ties es mayor a la cantidad de rondas ganadas por los jugadores
-    if ($count_tie > $rounds_wins_p2 && $count_tie > $rounds_wins_p1) 
+    if ($count_tie > $rounds_wins_p1 && $count_tie > $rounds_wins_p2) 
       'Tie'
     elsif ($rounds_wins_p1 > $rounds_wins_p2)
       'Player1'

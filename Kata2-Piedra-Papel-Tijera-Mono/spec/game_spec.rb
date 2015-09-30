@@ -61,16 +61,22 @@ describe 'Stone,Paper,Scissors or Monkey' do
 
   #Test 8
   it 'j1 play paper y j2 play stone deberia ganar j1 ' do
-    game.set_player1(player1)
-    game.set_player2(player2)
-    game.play_round(paper, stone)
+    p1_r1 = player1.paper
+    p2_r1 = player2.stone
+    game.play_round(p1_r1, p2_r1)
     expected = game.rounds[0]
     expect(expected).to eq 'p1'
   end
 
   #Test 9
-  it 'j1 y j2 juegan y gana j1 deberia ser Player1 ' do
-    expected = game.play_game(player1, player2)
+  it 'j1 y j2 juegan un game deberia ganar Player1 ' do
+    p1_r1 = player1.paper
+    p1_r2 = player1.paper
+    p1_r3 = player1.paper
+    p2_r1 = player2.stone
+    p2_r2 = player2.stone
+    p2_r3 = player2.stone
+    expected = game.play_game(p1_r1, p1_r2, p1_r3, p2_r1, p2_r2, p2_r3 )
     expect(expected).to eq 'Player1'
   end
 
@@ -148,20 +154,32 @@ describe 'Stone,Paper,Scissors or Monkey' do
 
   #Test 22
   it 'j1 play monkey y j2 play scissors deberia ganar j2 ' do
-    game.set_player1(player1)
-    game.set_player2(player2)
-    game.play_round(monkey, scissors)
+    p1_r1 = player1.monkey
+    p2_r1 = player2.scissors
+    game.play_round(p1_r1, p2_r1)
     expected = game.rounds[0]
     expect(expected).to eq 'p2'
   end
 
   #Test 23
   it 'j1 play monkey y j2 play monkey deberia ser round tie ' do
-    game.set_player1(player1)
-    game.set_player2(player2)
-    game.play_round(monkey, monkey)
+    p1_r1 = player1.paper
+    p2_r1 = player2.paper
+    game.play_round(p1_r1,p2_r1)
     expected = game.rounds[0]
     expect(expected).to eq 'tie'
+  end
+
+  #Test 24
+  it 'j1 y j2 juegan un game y gana j2 deberia ser Player2 ' do
+    p1_r1 = player1.paper
+    p1_r2 = player1.paper
+    p1_r3 = player1.paper
+    p2_r1 = player2.scissors
+    p2_r2 = player2.scissors
+    p2_r3 = player2.scissors
+    expected = game.play_game(p1_r1, p1_r2, p1_r3, p2_r1, p2_r2, p2_r3 )
+    expect(expected).to eq 'Player2'
   end
 
 end
