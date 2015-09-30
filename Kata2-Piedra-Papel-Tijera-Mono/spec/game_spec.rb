@@ -155,4 +155,13 @@ describe 'Stone,Paper,Scissors or Monkey' do
     expect(expected).to eq 'p2'
   end
 
+  #Test 23
+  it 'j1 play monkey y j2 play monkey deberia ser round tie ' do
+    game.set_player1(player1)
+    game.set_player2(player2)
+    game.play_round(monkey, monkey)
+    expected = game.rounds[0]
+    expect(expected).to eq 'tie'
+  end
+
 end
