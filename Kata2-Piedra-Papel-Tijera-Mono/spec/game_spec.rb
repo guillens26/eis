@@ -51,19 +51,24 @@ describe 'Stone,Paper,Scissors or Monkey' do
 
   #Test 7
   it 'jugador1 juega stone deberia ser stone ' do
-    expected = player1.play(stone)
+    expected = player1.stone
     expect(expected.name).to eq 'stone'
   end
 
   #Test 8
   it 'j1 play paper y j2 play stone deberia ganar j1 ' do
-    choice1 = player1.play(paper)
-    choice2 = player2.play(stone)
+    choice1 = player1.paper
+    choice2 = player2.stone
     game.compare(choice1, choice2)
     expected = game.rounds[0]
     expect(expected).to eq 'p1'
   end
 
+  #Test 9
+  it 'j1 y j2 juegan y gana j1 deberia ser Player1 ' do
+    expected = game.play_game(player1, player2)
+    expect(expected).to eq 'Player1'
+  end
 
 
 end

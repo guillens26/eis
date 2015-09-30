@@ -1,7 +1,33 @@
+require_relative '../model/choices/monkey'
+require_relative '../model/choices/scissors'
+require_relative '../model/choices/paper'
+require_relative '../model/choices/stone'
+
 class Player
 
-  def play(choice)
-    choice
+  def initialize()
+    @stone = Stone.new
+    @monkey = Monkey.new
+    @scissors = Scissors.new
+    @paper = Paper.new
+
   end
+
+  def stone
+    @stone
+  end
+
+  def monkey
+    @monkey
+  end
+
+  def paper
+    @paper
+  end
+
+  def scissors
+    @scissors
+  end
+
 
 end
