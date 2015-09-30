@@ -57,9 +57,9 @@ describe 'Stone,Paper,Scissors or Monkey' do
 
   #Test 8
   it 'j1 play paper y j2 play stone deberia ganar j1 ' do
-    choice1 = player1.paper
-    choice2 = player2.stone
-    game.compare(choice1, choice2)
+    game.set_player1(player1)
+    game.set_player2(player2)
+    game.play_round(paper, stone)
     expected = game.rounds[0]
     expect(expected).to eq 'p1'
   end

@@ -10,7 +10,12 @@ class Player
     @monkey = Monkey.new
     @scissors = Scissors.new
     @paper = Paper.new
+    @selected = nil
 
+  end
+
+  def selected
+    @selected
   end
 
   def stone
@@ -28,6 +33,12 @@ class Player
   def scissors
     @scissors
   end
+
+  def choose(select)
+    @selected = select
+    @selected
+  end
+
 
 
 end
