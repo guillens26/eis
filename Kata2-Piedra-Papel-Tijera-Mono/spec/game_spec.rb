@@ -221,6 +221,17 @@ describe 'Stone,Paper,Scissors or Monkey' do
     expect(expected).to eq 'Player1'
   end
 
-  
+  #Test 28
+  it 'j1 y j2 juegan un game y gana j2 en 3ra round deberia ser Player2 ' do
+    #ESte es un win para j2 en 3ra ronda
+    p1_r1 = player1.paper
+    p1_r2 = player1.paper
+    p1_r3 = player1.paper
+    p2_r1 = player2.scissors
+    p2_r2 = player2.stone
+    p2_r3 = player2.scissors
+    expected = game.play_game(p1_r1, p1_r2, p1_r3, p2_r1, p2_r2, p2_r3 )
+    expect(expected).to eq 'Player2'
+  end
 
 end
