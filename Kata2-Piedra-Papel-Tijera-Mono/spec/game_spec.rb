@@ -134,16 +134,25 @@ describe 'Stone,Paper,Scissors or Monkey' do
     expect(expected).to eq 'win'
   end
 
-  #Test 16
+  #Test 20
   it 'paper compare con paper deberia ser tie ' do
     expected = paper.compare(paper)
     expect(expected).to eq 'tie'
   end
 
-  #Test 17
+  #Test 21
   it 'paper compare con monkey deberia ser lose ' do
     expected = paper.compare(monkey)
     expect(expected).to eq 'lose'
+  end
+
+  #Test 22
+  it 'j1 play monkey y j2 play scissors deberia ganar j2 ' do
+    game.set_player1(player1)
+    game.set_player2(player2)
+    game.play_round(monkey, scissors)
+    expected = game.rounds[0]
+    expect(expected).to eq 'p2'
   end
 
 end
