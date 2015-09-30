@@ -24,25 +24,25 @@ describe 'Stone,Paper,Scissors or Monkey' do
   end
 
   #Test 2
-  it 'paper de stone deberia ser lose ' do
+  it 'stone paper deberia ser lose ' do
     expected = stone.paper
     expect(expected).to eq 'lose'
   end
 
   #Test 3
-  it 'scissors de stone deberia ser win ' do
+  it 'stone scissors deberia ser win ' do
     expected = stone.scissors
     expect(expected).to eq 'win'
   end
 
   #Test 4
-  it 'stone de stone deberia ser tie ' do
+  it 'stone stone deberia ser tie ' do
     expected = stone.stone
     expect(expected).to eq 'tie'
   end
 
   #Test 5
-  it 'monkey de stone deberia ser tie ' do
+  it 'stone monkey deberia ser tie ' do
     expected = stone.monkey
     expect(expected).to eq 'tie'
   end
@@ -74,30 +74,53 @@ describe 'Stone,Paper,Scissors or Monkey' do
     expect(expected).to eq 'Player1'
   end
 
-  #Test 13
+  #Test 10
   it 'scissors compare con monkey deberia ser lose ' do
     expected = scissors.compare(monkey)
     expect(expected).to eq 'lose'
   end
 
-  #Test 14
+  #Test 11
   it 'scissors compare con scissors deberia ser tie ' do
     expected = scissors.compare(scissors)
     expect(expected).to eq 'tie'
   end
 
-  #Test 15
+  #Test 12
   it 'scissors compare con stone deberia ser lose ' do
     expected = scissors.compare(stone)
     expect(expected).to eq 'lose'
   end
 
-  #Test 16
+  #Test 13
   it 'scissors compare con paper deberia ser win ' do
     expected = scissors.compare(paper)
     expect(expected).to eq 'win'
   end
 
+  #Test 14
+  it 'monkey compare con scissors deberia ser lose ' do
+    expected = monkey.compare(scissors)
+    expect(expected).to eq 'lose'
+  end
+
+  #Test 15
+  it 'monkey compare con stone deberia ser tie ' do
+    expected = monkey.compare(stone)
+    expect(expected).to eq 'tie'
+  end
+
+  #Test 16
+  it 'monkey compare con paper deberia ser win ' do
+    expected = monkey.compare(paper)
+    expect(expected).to eq 'win'
+  end
+
+  #Test 17
+  it 'monkey compare con monkey deberia ser tie ' do
+    expected = monkey.compare(monkey)
+    expect(expected).to eq 'tie'
+  end
 
 
 end
