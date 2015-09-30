@@ -54,6 +54,7 @@ class Game
     if (not hay_ganador())
       self.play_round(p1_r3,p2_r3)  
     end
+    #Muestro cual fue el resultado de la partida
     self.result_global_is()
 
   end
