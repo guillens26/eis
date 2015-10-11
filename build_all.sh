@@ -11,3 +11,9 @@ cd ..
 cd Kata2-Piedra-Papel-Tijera-Mono
 bundle install
 bundle exec rake
+cd ..
+cd Kata3-BatallaNaval
+bundle install
+bundle exec rake
+
+
