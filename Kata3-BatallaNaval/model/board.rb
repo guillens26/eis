@@ -1,4 +1,4 @@
-require 'matrix'
+require_relative '../model/my_matrix'
 
 class Board
 
