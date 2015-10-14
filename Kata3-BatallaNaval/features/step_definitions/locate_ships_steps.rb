@@ -35,3 +35,8 @@ end
 Then(/^i could not locate my ship in this position because already occupied$/) do
   expect(@excepcion.message).to eq 'The position is already occuped'
 end
+
+
+
+
+

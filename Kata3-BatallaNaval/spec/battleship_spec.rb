@@ -37,11 +37,11 @@ describe 'Battleship' do
   end
 
   #Test 5
-  it 'put a cruiser in pos wich a submarine should be submarine in 0,0  ' do
+  it 'put a cruiser in pos 2,2 wich a submarine should be pos already occuped  ' do
     battleship.create_empty_board(3,3)
     battleship.put_ship([2,2], 'submarine' , 'vertical')
     begin
-      battleship.put_ship([2,2], 'cruiser' , 'vertical')
+      battleship.put_ship([2,1], 'cruiser' , 'vertical')
     rescue Exception => e
      @excepcion = e
     end
