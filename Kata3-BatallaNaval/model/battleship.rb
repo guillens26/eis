@@ -10,9 +10,6 @@ class Battleship
   def initialize()
     @horizontal = Horizontal.new
     @vertical = Vertical.new
-    @cruiser = Cruiser.new
-    @destroyer = Destroyer.new
-    @submarine = Submarine.new
   end
 
   def board
@@ -63,11 +60,14 @@ class Battleship
 
   def choose_ship(ship)
     if ('submarine' == ship)
+      @submarine = Submarine.new
       @submarine
     elsif ('cruiser' == ship)
-      @cruiser   
+      @cruiser = Cruiser.new
+      @cruiser    
     else
-      @destroyer 
+      @destroyer = Destroyer.new
+      @destroyer
     end
   end
 

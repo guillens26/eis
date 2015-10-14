@@ -1,6 +1,6 @@
 class Ship
   
-  #Es abstracta
+  #Abstract class
   def initialize()
     raise 'Doh! You are trying to instantiate an abstract class!'
   end
