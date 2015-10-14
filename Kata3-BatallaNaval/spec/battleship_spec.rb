@@ -49,6 +49,15 @@ describe 'Battleship' do
   end
 
 
- 
+  #Test 6
+  it 'put a cruiser in pos outside de board should be The poscion is outside the limits' do
+    battleship.create_empty_board(3,3)
+    begin
+      battleship.put_ship([4,2], 'cruiser' , 'vertical')
+    rescue Exception => e
+     @excepcion = e
+    end
+    expect(@excepcion.message).to eq 'The poscion is outside the limits'
+  end
 
 end

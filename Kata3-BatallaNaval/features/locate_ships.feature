@@ -13,8 +13,7 @@ Feature: As a user I want to locate my ships
     When i put my ship in pos 2,2
     Then i could not locate my ship in this position because already occupied
 
-  @wip
   Scenario: I cant locate my boat in a position off the board
     Given a board size 3x3
-    When i put my ship in pos 4,2
+    When i put my ship in position 4,2
     Then i cant put my boat in this psition because nonexistent position
