@@ -74,8 +74,19 @@ class Battleship
   def shoot(pos)
     row = pos[0]
     column = pos[1]
-    if (state_in(pos) == 'water') 
+    elem_in_pos = state_in(pos)
+    if (elem_in_pos == 'water') 
       'water'
+    else
+      ship = elem_in_pos
+      ship.state - 1
+      ship.ubication[row,column] = nil
+      board.positions[row,column] = 'water'
+      if (ship.state == 0)
+        'sunken'
+      else
+        'touched'
+      end
     end
 
   end

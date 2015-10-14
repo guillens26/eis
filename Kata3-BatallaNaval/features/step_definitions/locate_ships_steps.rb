@@ -13,7 +13,7 @@ When(/^i put "([^"]*)" in board \[(\d+),(\d+)\] "([^"]*)"$/) do |arg1, arg2, arg
 end
 
 Then(/^locate my ship successfully$/) do
-  expect('submarine').to eq @battleship.board.positions[1,1].ship.name
+  expect('submarine').to eq @battleship.board.positions[1,1].name
 end
 
 

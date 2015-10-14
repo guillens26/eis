@@ -1,5 +1,3 @@
-require_relative '../model/section'
-
 class Vertical
 
   def put_ship(board, ship, row, column)
@@ -9,8 +7,8 @@ class Vertical
       if (check_empty_pos(board, lenght_ship, row, column2))
         while(lenght_ship > 0)
           pos = 0
-          ship.ubication[pos] = Section.new(ship)
-          board.positions[row, column2] = ship.ubication[pos]
+          ship.ubication[pos] = [row,column2]
+          board.positions[row, column2] = ship
           column2 = column2 + 1
           pos = pos + 1
           lenght_ship = lenght_ship -1

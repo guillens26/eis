@@ -17,7 +17,7 @@ describe 'Battleship' do
     battleship.create_empty_board(3,3)
     battleship.put_ship([1,1], 'submarine' , 'horizontal')
     expected = 'submarine'
-    expect(expected).to eq battleship.board.positions[1,1].ship.name
+    expect(expected).to eq battleship.board.positions[1,1].name
   end
 
   #Test 3
@@ -25,7 +25,7 @@ describe 'Battleship' do
     battleship.create_empty_board(3,3)
     battleship.put_ship([1,1], 'cruiser' , 'horizontal')
     expected = 'cruiser'
-    expect(expected).to eq battleship.board.positions[2,1].ship.name
+    expect(expected).to eq battleship.board.positions[2,1].name
   end
 
   #Test 4
@@ -33,7 +33,7 @@ describe 'Battleship' do
     battleship.create_empty_board(3,3)
     battleship.put_ship([0,0], 'destroyer' , 'vertical')
     expected = 'destroyer'
-    expect(expected).to eq battleship.board.positions[0,2].ship.name
+    expect(expected).to eq battleship.board.positions[0,2].name
   end
 
   #Test 5
@@ -64,6 +64,14 @@ describe 'Battleship' do
   it 'shoot in the pos 1,1 should be water  ' do
     battleship.create_empty_board(3,3)
     expected = 'water'
+    expect(expected).to eq battleship.shoot([1,1])
+  end
+
+  #Test 8
+  it 'shoot in the pos 1,1 witch cruiser should be touched  ' do
+    battleship.create_empty_board(3,3)
+    battleship.put_ship([1,1], 'cruiser' , 'horizontal')
+    expected = 'touched'
     expect(expected).to eq battleship.shoot([1,1])
   end
 
