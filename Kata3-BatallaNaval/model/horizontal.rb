@@ -8,7 +8,12 @@ class Horizontal
     while(lenght_ship > 0)
       pos = 0
       ship.ubication[pos] = Section.new(ship)
-      board.positions[row2, column] = ship.ubication[pos]
+      if(board.positions[row2, column] == nil)
+        board.positions[row2, column] = ship.ubication[pos]
+      else
+        raise 'The position is already occuped'
+      end
+
       row2 = row2 + 1
       pos = pos + 1
       lenght_ship = lenght_ship -1

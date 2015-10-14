@@ -7,8 +7,7 @@ Feature: As a user I want to locate my ships
     Given a board empty
     When i put "submarine" in board [1,1] "horizontally"
     Then locate my ship successfully
-
-  @wip  
+  
   Scenario: Unable to locate my ship in a position already occupied
     Given a board with position 2,2 occuped
     When i put my ship in pos 2,2
