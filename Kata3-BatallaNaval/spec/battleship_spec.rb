@@ -60,4 +60,11 @@ describe 'Battleship' do
     expect(@excepcion.message).to eq 'The poscion is outside the limits'
   end
 
+  #Test 7
+  it 'shoot in the pos 1,1 should be water  ' do
+    battleship.create_empty_board(3,3)
+    expected = 'water'
+    expect(expected).to eq battleship.shoot([1,1])
+  end
+
 end

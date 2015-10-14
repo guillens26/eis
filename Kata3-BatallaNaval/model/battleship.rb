@@ -71,4 +71,19 @@ class Battleship
     end
   end
 
+  def shoot(pos)
+    row = pos[0]
+    column = pos[1]
+    if (state_in(pos) == 'water') 
+      'water'
+    end
+
+  end
+
+  def state_in(pos)
+    row = pos[0]
+    column = pos[1]
+    @board.positions[row, column]
+  end
+
 end
