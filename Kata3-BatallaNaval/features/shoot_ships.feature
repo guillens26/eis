@@ -13,7 +13,6 @@ Feature: As a user I want to shoot the enemy ships
     When i shoot in positiom 2,1
     Then my shoot shot a ship but do not sink
 
-  @wip
   Scenario: Touch shot a ship and sink
     Given a pos 1,1 in my board with submarine occuped
     When i shoot in position 1,1

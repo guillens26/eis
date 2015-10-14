@@ -22,4 +22,8 @@ class Ship
     @name
   end
 
+  def sub_state
+    @state = @state -1
+  end
+
 end

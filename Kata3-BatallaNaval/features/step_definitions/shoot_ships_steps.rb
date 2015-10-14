@@ -30,3 +30,17 @@ end
 Then(/^my shoot shot a ship but do not sink$/) do
   expect(@expected).to eq 'touched'
 end
+
+
+Given(/^a pos (\d+),(\d+) in my board with submarine occuped$/) do |arg1, arg2|
+  @battleship.create_empty_board(3,3)
+  @battleship.put_ship([1,1], 'submarine' , 'horizontal')
+end
+
+When(/^i shoot in position (\d+),(\d+)$/) do |arg1, arg2|
+  @expected = @battleship.shoot([1,1])
+end
+
+Then(/^my shot snip the submarine$/) do
+  expect(@expected).to eq 'sunken'
+end

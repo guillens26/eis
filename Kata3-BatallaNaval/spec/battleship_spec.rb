@@ -75,4 +75,13 @@ describe 'Battleship' do
     expect(expected).to eq battleship.shoot([1,1])
   end
 
+  #Test 9
+  it 'shoot in the pos 1,1 and 2,1 witch cruiser should be sunken  ' do
+    battleship.create_empty_board(3,3)
+    battleship.put_ship([1,1], 'cruiser' , 'horizontal')
+    battleship.shoot([1,1])
+    expected = 'sunken'
+    expect(expected).to eq battleship.shoot([2,1])
+  end
+
 end

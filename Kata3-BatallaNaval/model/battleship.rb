@@ -79,7 +79,7 @@ class Battleship
       'water'
     else
       ship = elem_in_pos
-      ship.state - 1
+      ship.sub_state()
       ship.ubication[row,column] = nil
       board.positions[row,column] = 'water'
       if (ship.state == 0)
