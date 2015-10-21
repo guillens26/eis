@@ -1,4 +1,7 @@
 Feature: Basic operations
+  
+  Background:
+    Given the home page
 
   @wip
   Scenario: add

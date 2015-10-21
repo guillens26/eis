@@ -1,4 +1,4 @@
-#require_relative 'algunmodelo?'
+#require_relative '../models/calculator'
 
 module Calculator
   class App < Padrino::Application
@@ -6,6 +6,10 @@ module Calculator
     register Padrino::Helpers
 
     enable :sessions
+
+    get '/' do
+      render '/home'
+    end
 
   end
 end
