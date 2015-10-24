@@ -11,5 +11,11 @@ describe 'Calculator' do
     expect(expected).to eq calculator.sum(1,2)
   end
 
+  #Test 2
+  it 'calculator sub de 2 y 2 should be 0' do
+    expected = 0
+    expect(expected).to eq calculator.subtract(2,2)
+  end
+
 
 end

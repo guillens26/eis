@@ -27,4 +27,11 @@ class Calculator
     @total
   end
 
+  def subtract(num1, num2)
+    set_operator1(num1)
+    set_operator2(num2)
+    @total = @operator1 - @operator2
+    @total
+  end
+
 end

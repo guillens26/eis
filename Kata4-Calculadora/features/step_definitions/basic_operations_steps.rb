@@ -18,3 +18,8 @@ end
 Then(/^the result is (\d+)$/) do |arg1|
   expect(page).to have_content("The result is: #{arg1}")
 end
+
+When(/^subtract$/) do
+  select('sub', from: 'operations')
+  click_button('=')
+end

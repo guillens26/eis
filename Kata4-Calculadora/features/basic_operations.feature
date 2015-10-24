@@ -9,11 +9,10 @@ Feature: Basic operations
     When add
     Then the result is 3
   
-  @wip
   Scenario: subtraction
     Given operator is 2
     And another operator is 2
-    When subtrac
+    When subtract
     Then the result is 0
 
   @wip

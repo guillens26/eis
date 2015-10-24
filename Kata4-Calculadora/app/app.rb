@@ -14,8 +14,10 @@ module CalculatorApp
     end
 
     post '/' do
-      @result = calculator.sum(params[:operator1].to_i, params[:operator2].to_i)
+      @operation_choose = params[:operations]
+      @result = calculator.send(@operation_choose, params[:operator1].to_i, params[:operator2].to_i)
       render '/home'
     end
+
   end
 end
