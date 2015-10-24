@@ -23,3 +23,8 @@ When(/^subtract$/) do
   select('sub', from: 'operations')
   click_button('=')
 end
+
+When(/^the average is (\d+)$/) do |arg1|
+  select('average', from: 'operations')
+  click_button('=')
+end

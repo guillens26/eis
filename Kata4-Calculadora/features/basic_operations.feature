@@ -15,7 +15,6 @@ Feature: Basic operations
     When subtract
     Then the result is 0
 
-  @wip
   Scenario: average
     Given operator is 1
     And another operator is 3

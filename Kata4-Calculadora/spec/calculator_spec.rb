@@ -17,5 +17,11 @@ describe 'Calculator' do
     expect(expected).to eq calculator.subtract(2,2)
   end
 
+  #Test 3
+  it 'calculator average de 1 y 3 should be 2' do
+    expected = 2
+    expect(expected).to eq calculator.average(1,3)
+  end
+
 
 end
