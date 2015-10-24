@@ -19,3 +19,7 @@ Given(/^i do a substraction$/) do
   select('sub', from: 'operations')
   click_button('=')
 end
+
+Given(/^reseteo la memoria$/) do
+  visit '/'
+end

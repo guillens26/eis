@@ -37,5 +37,14 @@ describe 'Calculator' do
     expect(expected).to eq calculator.number_of_operations()
   end
 
+  #Test 6
+  it 'calculator with  2 operations and reset operations should be 0' do
+    calculator.sum(2,2)
+    calculator.subtract(2,2)
+    calculator.reset_number_of_operations()
+    expected = 0
+    expect(expected).to eq calculator.number_of_operations()
+  end
+
 
 end
