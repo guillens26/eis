@@ -3,17 +3,18 @@ Given(/^the home page$/) do
 end
 
 Given(/^operator is (\d+)$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in('operator1', with: arg1)
 end
 
 Given(/^another operator is (\d+)$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  fill_in('operator2', with: arg1)
 end
 
 When(/^add$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  select('sum', from: 'operations')
+  click_button('=')
 end
 
 Then(/^the result is (\d+)$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content("The result is: #{arg1}")
 end

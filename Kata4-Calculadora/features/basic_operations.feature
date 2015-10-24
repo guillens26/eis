@@ -3,7 +3,6 @@ Feature: Basic operations
   Background:
     Given the home page
 
-  @wip
   Scenario: add
     Given operator is 1
     And another operator is 2
