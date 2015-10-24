@@ -29,5 +29,13 @@ describe 'Calculator' do
     expect(expected).to eq calculator.number_of_operations()
   end
 
+  #Test 5
+  it 'calculator with  2 operations should be 2' do
+    calculator.sum(2,2)
+    calculator.subtract(2,2)
+    expected = 2
+    expect(expected).to eq calculator.number_of_operations()
+  end
+
 
 end

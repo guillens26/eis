@@ -7,7 +7,6 @@ Feature: Amount memory operations
     Given i did not operations
     Then the number of operations is 0
 
-  @wip
   Scenario: when I increased the number of operations
     Given i do a sum
     And i do a substraction
