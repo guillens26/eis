@@ -9,14 +9,14 @@ end
 Given(/^i do a sum$/) do
   fill_in('operator1', with: 2)
   fill_in('operator2', with: 2)
-  select('sum', from: 'operations')
+  select('+', from: 'operations')
   click_button('=')
 end
 
 Given(/^i do a substraction$/) do
   fill_in('operator1', with: 2)
   fill_in('operator2', with: 2)
-  select('sub', from: 'operations')
+  select('-', from: 'operations')
   click_button('=')
 end
 

@@ -4,24 +4,24 @@
         <meta charset="utf-8" />
     </head>
     <body>
-        <div>
+        <div align="center">
+            <h1>Calculator Kata4</h1>
             <form method="POST" action="/" >
                 <%= csrf_token_field %>
                 <label>Operator 1</label>
                 <input id="operator1" type="text" name="operator1"><br>
-                <label>Operator 2</label>
-                <input id="operator2" type="text" name="operator2"><br>
-                <label>Operations:</label>
                 <select id="operations" name="operations">
-                    <option value="sum">sum</option>
-                    <option value="subtract">sub</option>
+                    <option value="sum">+</option>
+                    <option value="subtract">-</option>
                     <option value="average">average</option>
                 </select><br>
+                <label>Operator 2</label>
+                <input id="operator2" type="text" name="operator2"><br>
                 <input type="submit" value="="/>
             </form>
         </div>
-        <div id="result"> The result is: <%= @result %></div>
-        <div id="memory"> Memory numbers of operations: <%= @memory %></div>
+        <div align="center" id="result"> The result is: <%= @result %></div>
+        <div align="center" id="memory"> Memory numbers of operations: <%= @memory %></div>
         
     </body>
 </html>

@@ -11,7 +11,7 @@ Given(/^another operator is (\d+)$/) do |arg1|
 end
 
 When(/^add$/) do
-  select('sum', from: 'operations')
+  select('+', from: 'operations')
   click_button('=')
 end
 
@@ -20,7 +20,7 @@ Then(/^the result is (\d+)$/) do |arg1|
 end
 
 When(/^subtract$/) do
-  select('sub', from: 'operations')
+  select('-', from: 'operations')
   click_button('=')
 end
 
