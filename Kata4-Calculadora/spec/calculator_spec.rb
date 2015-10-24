@@ -23,5 +23,11 @@ describe 'Calculator' do
     expect(expected).to eq calculator.average(1,3)
   end
 
+  #Test 4
+  it 'calculator without operations should be 0' do
+    expected = 0
+    expect(expected).to eq calculator.number_of_operations()
+  end
+
 
 end

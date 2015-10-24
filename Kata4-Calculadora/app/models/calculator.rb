@@ -1,4 +1,8 @@
 class Calculator
+
+  def initialize
+    @number_of_operations = 0
+  end
   
   def operator1
     @operator1
@@ -20,9 +24,14 @@ class Calculator
     @total
   end
 
+  def number_of_operations
+    @number_of_operations
+  end
+
   def sum(num1, num2)
     set_operator1(num1)
     set_operator2(num2)
+    @number_of_operations = @number_of_operations +1
     @total = @operator1 + @operator2
     @total
   end
@@ -30,6 +39,7 @@ class Calculator
   def subtract(num1, num2)
     set_operator1(num1)
     set_operator2(num2)
+    @number_of_operations = @number_of_operations +1
     @total = @operator1 - @operator2
     @total
   end
@@ -37,8 +47,14 @@ class Calculator
   def average(num1, num2)
     set_operator1(num1)
     set_operator2(num2)
+    @number_of_operations = @number_of_operations +1
     @total = (@operator1 + @operator2) /2
     @total
   end
+
+  def reset_number_of_operations()
+    @number_of_operations = 0
+  end
+
 
 end
