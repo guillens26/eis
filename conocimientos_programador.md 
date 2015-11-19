@@ -1,0 +1,69 @@
+---
+title: Conocimientos programador
+author: Sanchez Guillermo Neri
+layout: post
+---
+
+Conocimientos programador
+=============================
+
+---
+
++ Fuente: [1]:http://www.javacodegeeks.com/2014/05/10-articles-every-programmer-must-read.html
++ Autor: Javin Paul
+
+---
+
+## Opinion Personal :
+
+### What Every Programmer Should Know about Memory:
+
++ Este artículo no me parace tan interesante ya que en los lenguajes mas modernos pocas veces tocamos la memoria. Igualmente entenderla esta bueno y en la carrera en Organizacion de computadoras se vieron estos temas.
+
+### What Every Computer Scientist Should Know About Floating-Point Arithmetic
+
++ Sobre el punto flotante si me parece interesante leer este articulo porque se de alguno problemas de casos reales de que por usar punto flotante el programa hace cosas que no deberia y esto genero muchos problemas. Mas alla de esto es bueno conocer bien los elementos con los que tenemos que trabajar.
+
+### What Every Developer Should know about Unicode
+
++ Unicode me parace perfecta la idea de un juego de caracteres para todo el planeta, a mi forma de ver es bueno poder llevar las cosas que se puedan a estandares asi todos usamos lo mismo.
+
+### What Every Programmer Should know about Time
+
++ Realmente no tenia en cuenta la idea de que la hora y fecha podian representar un problema en mi codigo, me sirvio para tenerlo en cuenta a futuro.
+
+### What every web developer must know about URL encoding
+
++ URL es imprecindible saber si vamos a trabajar en web. Parece interesante el artivulo porque da problemas comunes y sus soluciones.
+
+### What should every programmer know about web development?
+
++ Este me parece el articulo mas interesante ya que es un combo de cosas para desarrollo web que si o si necesitamos saber y dominar porque seguramente sea en lo que mas desarrollemos y todas las tecnicas que aparecen ahi se utilizan mucho.
+
+### What Every Programmer Should Know About SEO
+
++  Primero que nada no sabia que significaba SEO, asi que ya empezamos bien aprendiendo un nuevo concepto y tampoco sabia que son tan importantes para nosotros. Parece un articulo muy interesante.
+
+### What Every C Programmer Should Know About Undefined Behaviour #1/3
+
++ En cuanto a este articulo la verdad que algo vimos de c y el comportamiento indefinido en estructura de datos 
+pero no me interesa saber mas que lo basico de este lenguaje almenos por ahora.
+
+### What Every Programmer Need to know about networking
+
++ Sobre redes en la facultad tenes la materia dicha y  se ven estos temas, esta bueno conocer un poco como funciona todas las redes.
+
+### What Every Java Developer Should Know about String
+
++ Los String es importante tenerlo en cuenta simpre, es algo parecido a punto flotante. Son cosas de las que tenmos que conocer y estar seguro de como aplicarlas. 
+
+### What should every programmer know about security?
+
++ Creo que el tema seguridad es mas que interesante y necesitamos saberlo en este mundo de hoy, no concuerdo con que un conocimiento minimo sea suficiente, para mi tendria que ser algo mas hoy en dia.
+En cuanto a los conceptos de seguridad que dan parecen ser muy buenos y habria que entenderlos a todos.
+
+### Latency Numbers Every Programmer Should Know
+
++ Tenia alguna nocion de cuanto era la latencia( vistos en Orga ) memorias y discos, igualmente esta bueno para refrescar estos conceptos.
+
+---
