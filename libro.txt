@@ -1,0 +1,15 @@
+Libro: Concurrent programming in Java: design principles and patterns
+Autor: Lea, Douglas. 
+Año de publicacion: 2a ed. Reading, Mass. : Addison-Wesley, c2000.
+
+Resumen:
+El libro presenta el soporte de concurrencia en Java y le muestra a los lectores cómo iniciar, controlar y coordinar las actividades
+concurrentes, ofrece numerosas técnicas para diseñar e implementar estructuras en Java que resuelven los retos de programación concurrentes
+comunes. En concreto, el libro presenta estrategias importantes para evitar las incoherencias que puedan surgir en programas multihilo.
+
+Porque este libro:
+Elijo este libro porque estoy cursando actualmente la materia de programación concurrente y me parecio interesante esta misma, en la cual usamos Java en el tp final.
+
+
+Sanchez Guillermo Neri
+
